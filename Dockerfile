@@ -6,9 +6,8 @@ WORKDIR /app/
 
 COPY . /app/
 
-RUN echo deb http://archive.ubuntu.com/ubuntu precise universe > /etc/apt/sources.list.d/universe.list
-RUN apt-get update && apt-get install -y wget git curl zip monit openssh-server git iptables ca-certificates daemon net-tools libfontconfig-dev && \
-sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && apt-get update
+RUN echo deb http://debian.ustc.edu.cn/ubuntu/ precise main restricted universe multiverse > /etc/apt/sources.list.d/universe.list
+RUN apt-get update && apt-get install -y wget git curl zip monit openssh-server git iptables ca-certificates daemon net-tools libfontconfig-dev
 
 #Install Oracle JDK 8
 #--------------------
