@@ -26,4 +26,4 @@ RUN echo "# Installing Nodejs" && \
     apt-get install nodejs build-essential -y && \
     npm cache clear -f 
     
-RUN echo "Hello World"    
+
