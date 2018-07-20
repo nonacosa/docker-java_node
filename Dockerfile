@@ -22,7 +22,8 @@ RUN echo "# Installing Oracle JDK 8" && \
 # ------------
 
 RUN echo "# Installing Nodejs" && \
-    curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+    curl -sL https://deb.nodesource.com/setup_8.x | bash - && \ 
+    apt-get update && \
     apt-get install nodejs build-essential -y && \
     npm cache clear -f 
     
